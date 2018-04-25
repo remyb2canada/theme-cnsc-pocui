@@ -1,0 +1,150 @@
+/*
+ *
+ * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+ * wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
+ *
+ */
+/*
+  @title: All screen views
+ */
+
+%fip-height {
+	height: 1.5em;
+}
+
+%all-view-navigation-links {
+	@include navigation-links;
+}
+
+.wb-disable {
+	body {
+		background: none !important;
+	}
+
+	header {
+		background: #3f698f;
+	}
+}
+
+.wb-sl {
+	background-color: #000;
+	color: #fff;
+	font-weight: 700;
+
+	&:focus {
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+#wb-bar {
+	background: $gc-header-footer-background-color;
+	min-height: 2.6em;
+
+	a {
+		color: $gc-header-footer-text-color;
+	}
+}
+
+#gcwu-sig {
+	@extend %fip-height;
+	margin: 10px 0;
+}
+
+#wmms {
+	@extend %fip-height;
+}
+
+#wb-sttl {
+	@extend %all-view-navigation-links;
+
+	a {
+		color: #fff !important;
+
+		span {
+			line-height: normal;
+		}
+	}
+}
+
+#wb-srch-sub {
+	float: right;
+	margin-left: 5px;
+}
+
+#wb-dtmd {
+	float: right;
+}
+
+#wb-info {
+	@include navigation-links;
+	background: $screen-md-footer-background-color url("../assets/sft-deco.gif") repeat-x scroll center top;
+
+	h2,
+	h3 {
+		font: {
+			size: 120%;
+			weight: 700;
+		}
+	}
+
+	li {
+		margin-bottom: .75em;
+	}
+}
+
+#gc-tctr {
+	margin-bottom: 0;
+	padding: {
+		right: 0;
+		top: 5px;
+	}
+
+	> {
+		:first-child {
+			border-right: 1px solid $screen-md-notices-border-color;
+			line-height: 1.5;
+			padding-right: 10px;
+		}
+	}
+}
+
+[dir=rtl] {
+	#wb-srch-sub {
+		float: left;
+		margin: {
+			left: 0;
+			right: 5px;
+		}
+	}
+
+	#wb-dtmd {
+		float: left;
+	}
+
+	#wb-sec {
+		.list-group {
+			.list-group {
+				.list-group-item {
+					padding-left: 15px;
+					padding-right: 1.8em;
+				}
+			}
+		}
+	}
+
+	#gc-tctr {
+		> {
+			:first-child {
+				border: {
+					left: 1px solid $screen-md-notices-border-color;
+					right: 0;
+				}
+				padding: {
+					left: 10px;
+					right: 0;
+				}
+			}
+		}
+	}
+}

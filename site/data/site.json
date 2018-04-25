@@ -1,0 +1,7 @@
+{
+    "defaultLanguage": "en",
+    "wetSiteRoot": "http://wet-boew.github.io/v4.0-ci",
+    "repository": "theme-cnsc-fepoc",
+    "theme": "theme-cnsc-fepoc",
+    "themeJS": true
+}

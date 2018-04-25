@@ -1,0 +1,33 @@
+---
+{
+"layout": "../../lib/wet-boew/site/layouts/core.hbs"
+}
+---
+{{>skiplinks}}
+
+{{>header}}
+
+{{#is secondarymenu "true"}}
+<div class="container">
+	<div class="row">
+{{/is}}
+<main role="main" property="mainContentOfPage" class="{{#is secondarymenu "true"}}col-md-9 col-md-push-3{{else}}container{{/is}}">
+	<h1 id="wb-cont" property="name">{{title}}</h1>
+	{{>contentbuttons}}
+	{{>body}}
+{{#if page.dateModified}}
+	{{>datemodified}}
+{{/if}}
+</main>
+{{#is secondarymenu "true"}}
+		<nav role="navigation" id="wb-sec" typeof="SiteNavigationElement" class="col-md-3 col-md-pull-9 visible-md visible-lg">
+			<h2>{{{i18n "tmpl-section-menu"}}}</h2>
+			{{>secondarymenu}}
+		</nav>
+	</div>
+</div>
+{{/is}}
+
+{{#isnt footer "false"}}
+	{{>footer}}
+{{/isnt}}

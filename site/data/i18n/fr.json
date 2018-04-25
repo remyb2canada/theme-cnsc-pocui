@@ -1,0 +1,18 @@
+{
+    "tmpl-home-url": "accueil",
+    "tmpl-gov-url": "gouv",
+    "tmpl-dept-url": "min",
+    "site-title": "FR - CNSC Static PoC",
+    "lbl-email-address": "Courriel",
+    "ph-email-address": "entrer votre Courriel",
+    "lbl-password": "Mot de passe",
+    "ph-password": "Mot de passe",
+    "ttl-license-list": "Licenses",
+    "inst-license-list": "Veuillez sélectionner une licence dans la liste ci-dessous pour continuer.",
+    "ttl-license-number": "FR - Lisense Number",
+    "ttl-effective-date": "FR - Effective Date",
+    "ttl-expiry-date": "FR - Expiry Date",
+    "msg-loading": "FR - Loading",
+    "msg-required": "FR - required",
+    "lbl-user":  "FR - User"
+}

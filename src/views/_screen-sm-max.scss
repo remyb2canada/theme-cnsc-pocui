@@ -1,0 +1,229 @@
+/*
+ *
+ * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+ * wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
+ *
+ */
+/*
+  @title: Small view and under (screen only)
+ */
+
+%small-view-display-none {
+	display: none;
+}
+
+#gcwu-sig {
+	@extend %small-view-display-none;
+}
+
+#wmms {
+	height: 2em;
+	margin-left: 15px;
+	margin-top: 4px;
+	position: absolute;
+	top: .3em;
+}
+
+.wb-disable {
+	header {
+		background: #ebeae9;
+	}
+
+	#wmms {
+		position: static;
+	}
+}
+
+#gc-bar {
+	@extend %small-view-display-none;
+}
+
+#wb-bar {
+	min-height: 3em;
+}
+
+#wb-bnr {
+	background: {
+		color: $screen-sm-banner-gradient-end;
+		image: linear-gradient($screen-sm-banner-gradient-start, $screen-sm-banner-gradient-start, $screen-sm-banner-gradient-end);
+	}
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr="#{ie-hex-str($screen-sm-banner-gradient-start)}", endColorstr="#{ie-hex-str($screen-sm-banner-gradient-end)}");
+}
+
+#wb-sttl {
+	position: relative;
+
+	a {
+		font-size: 1.5em;
+		text-shadow: 0 1px 1px $screen-sm-banner-text-shadow-color;
+	}
+}
+
+#wb-glb-mn {
+	.pnl-btn {
+		float: right;
+		margin: 0;
+		position: relative;
+		z-index: 2;
+
+		li {
+			padding: 4px 0 4px 10px;
+			width: 100%;
+		}
+
+		a {
+			color: $gc-header-footer-background-color;
+			display: block;
+			font-size: 1.7em;
+			line-height: 1em;
+			width: 100%;
+		}
+
+		span {
+			.glyphicon-th-list {
+				padding-left: 10px;
+				top: 0;
+			}
+		}
+	}
+}
+
+%small-view-under-color {
+	color: #fff;
+}
+
+#mb-pnl {
+	background: $screen-sm-mb-pnl-bg;
+
+	header {
+		background-color: $screen-sm-menu-header-background-color;
+	}
+
+	nav {
+		a {
+			color: $screen-sm-menu-links-color;
+			text-decoration: none;
+		}
+	}
+
+	summary {
+		&:hover,
+		&:focus {
+			background: transparent;
+		}
+	}
+
+	.modal-body {
+		background: $screen-sm-mb-pnl-bg;
+		padding: 0;
+	}
+
+	.modal-footer {
+		background: $screen-sm-mb-pnl-bg;
+	}
+
+	.srch-pnl {
+		.form-group {
+			float: left;
+			margin-right: 5px;
+			width: 75%;
+		}
+	}
+
+	#wb-srch-sub-imprt {
+		@extend %small-view-under-color;
+		background: #146094;
+		border-color: #146094;
+
+		&:hover,
+		&:focus,
+		&:active {
+			@extend %small-view-under-color;
+			background-color: #3276b1;
+			border-color: #285e8e;
+		}
+	}
+
+	.lng-ofr {
+		a {
+			color: $screen-sm-menu-links-color;
+			text-decoration: none;
+		}
+	}
+
+	.sm-pnl {
+		background: #146094;
+
+		a {
+			@extend %small-view-under-color;
+		}
+
+		summary {
+			@extend %small-view-under-color;
+
+			&:hover,
+			&:focus {
+				@extend %small-view-under-color;
+			}
+		}
+	}
+}
+
+#wb-srch {
+	margin-right: 15px;
+	text-align: right;
+
+	.form-group {
+		display: inline-block;
+	}
+}
+
+#wb-bc {
+	@include linear-background($screen-sm-breadcrumb-bar-gradient-start, $screen-sm-breadcrumb-bar-gradient-end);
+}
+
+#gc-info {
+	display: none;
+}
+
+[dir=rtl] {
+	#wb-srch {
+		margin-left: 15px;
+		text-align: left;
+	}
+
+	#mb-pnl {
+		.srch-pnl {
+			.form-group {
+				float: right;
+				margin-left: 5px;
+				margin-right: auto;
+				width: 75%;
+			}
+		}
+	}
+
+	#wmms {
+		left: auto;
+		right: 15px;
+	}
+
+	#wb-glb-mn {
+		> {
+			ul {
+				text-align: left;
+			}
+		}
+
+		.pnl-btn {
+			float: left;
+
+			span {
+				.glyphicon-th-list {
+					padding-left: 0;
+					padding-right: 10px;
+				}
+			}
+		}
+	}
+}

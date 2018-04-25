@@ -1,0 +1,34 @@
+{
+    "name": "theme-cnsc-fepoc",
+    "version": "4.0.27",
+    "license": "https://github.com/wet-boew/theme-gcwu-fegc/blob/master/License-en.txt",
+    "ignore": [
+        "**/.*",
+        "bower.json",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests",
+        "lib"
+    ],
+    "devDependencies": {
+        "wet-boew": "https://github.com/wet-boew/wet-boew.git#4.0.27"
+    },
+    "homepage": "https://github.com/wet-boew/theme-gcwu-fegc",
+    "authors": [
+        "WET Team"
+    ],
+    "description": "CNSC Front End POC, based on the Government of Canada Web Usability Theme",
+    "main": [
+        "src/theme.js",
+        "src/theme.scss"
+    ],
+    "moduleType": [
+        "globals"
+    ],
+    "keywords": [
+        "wet-boew",
+        "theme",
+        "gcwu"
+    ]
+}
