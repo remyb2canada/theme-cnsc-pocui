@@ -2,78 +2,149 @@
  * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
  * wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
  */
-( function( $, wb, window ) {
-"use strict";
+;(function ($, wb, window) {
+  'use strict'
+  window.poc = {
+    // USERS & AUTHENTICATION
+    getCurrentUser: getCurrentUser,
+    signIn: signIn,
 
-/*
- * Variable and function definitions.
- * These are global to the plugin - meaning that they will be initialized once per page,
- * not once per instance of plugin on the page. So, this is a good place to define
- * variables that are common to all instances of the plugin on a page.
- */
-/*var $document = wb.doc,
+    // LICENCES
+    getLicenceList: getLicenceList,
+    getSelectedLicence: getSelectedLicence,
+    licenceListTo2DArray: licenceListTo2DArray,
+    selectLicence: selectLicence,
 
-	onXXSmallView = function() {
-		return;
-	},
+    // DATA TABLE HELPER
+    addRowClickHandler: addRowClickHandler,
+    bindDataToTable: bindDataToTable
+  }
 
-	onXSmallView = function() {
-		return;
-	},
+  var API_ROOT = 'https://cnsc-poc-api.azurewebsites.net/api/'
+  var store = window.sessionStorage
 
-	onSmallView = function() {
-		return;
-	},
+  /* -----------------------------
+   * USERS AND AUTHENTICATION
+   *----------------------------- */
+  function signIn (email, password, redirect) {
+    $.get(API_ROOT + '/users/1234', function (user) {
+      user.email = user.email || email
+      cacheUser(user)
+      location.href = redirect
+    })
+  }
 
-	onMediumView = function() {
-		return;
-	},
+  function cacheUser (user) {
+    setState({
+      currentUser: {
+        id: '1234',
+        email: user.email,
+        name: user.firstName + ' ' + user.lastName
+      }
+    })
+  }
 
-	onLargeView = function() {
-		return;
-	},
+  function getCurrentUser () {
+    const user = getState().currentUser
+    if (user) {
+      return user
+    }
+    location.href = '/index-' + wb.lang + '.html'
+  }
 
-	onXLargeView = function() {
-		return;
-	};
+  /* -----------------------------
+   * LICENCES
+   *----------------------------- */
+  function getLicenceList (listReceivedCallback) {
+    var licenceList = getCachedLicenseList()
+    if (licenceList) {
+      console.log('using cached license list')
+      return listReceivedCallback(licenceList)
+    }
 
-$document.on( "xxsmallview.wb xsmallview.wb smallview.wb mediumview.wb largeview.wb xlargeview.wb", function( event ) {
-	var eventType = event.type;
+    var sstsAuthorizationsEndpoint =
+      API_ROOT + '/users/' + getCurrentUser().id + '/authorizations/SSTS'
 
-	switch ( eventType ) {
+    $.get(sstsAuthorizationsEndpoint, authorizationReceived)
 
-	case "xxsmallview":
-		onXXSmallView();
-		break;
+    function authorizationReceived (authorization) {
+      var licenceList = authorization.licences
+      cacheLicenceList(licenceList)
+      listReceivedCallback(licenceList)
+    }
+  }
 
-	case "xsmallview":
-		onXSmallView();
-		break;
+  function getCachedLicenseList () {
+    return getState().licenceList
+  }
 
-	case "smallview":
-		onSmallView();
-		break;
+  function cacheLicenceList (list) {
+    setState({
+      licenceList: list
+    })
+  }
 
-	case "mediumview":
-		onMediumView();
-		break;
+  function licenceListTo2DArray (list) {
+    return list.map(function (licence) {
+      return [licence.licenceNumber, licence.effectiveDate, licence.expiryDate]
+    })
+  }
 
-	case "largeview":
-		onLargeView();
-		break;
+  function selectLicence (licenceNumber) {
+    console.log('selected licence number: ' + licenceNumber)
+    setState({
+      selectedLicence: licenceNumber
+    })
+  }
 
-	case "xlargeview":
-		onXLargeView();
-		break;
-	}
-} );*/
+  function getSelectedLicence () {
+    var selectedLicence = getState().selectedLicence
+    if (!selectedLicense) {
+      location.href = '/create-sealed-source-step-one-' + wb.lang + '.html'
+    }
+    return selectedLicense
+  }
 
-window[ "wb-data-ajax" ] = {
-	corsFallback: function( fetchObj ) {
-		fetchObj.url = fetchObj.url.replace( ".html", ".htmlp" );
-		return fetchObj;
-	}
-};
+  /* -----------------------------
+   * DATA TABLE HELPERS
+   *----------------------------- */
+  function bindDataToTable (data, $table, options) {
+    var config = options || {}
+    config.data = data
 
+    $table
+      .addClass('wb-tables')
+      .attr('data-wb-tables', JSON.stringify(config))
+      .trigger('wb-init.wb-tables')
+  }
 
-} )( jQuery, wb, this );
+  function addRowClickHandler ($table, onClick) {
+    $table.on('init.dt', function (event) {
+      $table.find('tr').each(function (index, row) {
+        if (index > 0) {
+          $(row).click(function (e) {
+            onClick($(row))
+          })
+        }
+      })
+    })
+  }
+
+  /* -----------------------------
+   * STATE MANAGEMENT
+   *----------------------------- */
+  function getState () {
+    return JSON.parse(store.getItem('state') || '{}')
+  }
+
+  function setState (state) {
+    store.setItem('state', JSON.stringify(Object.assign(getState(), state)))
+  }
+
+  window['wb-data-ajax'] = {
+    corsFallback: function (fetchObj) {
+      fetchObj.url = fetchObj.url.replace('.html', '.htmlp')
+      return fetchObj
+    }
+  }
+})(jQuery, wb, this)

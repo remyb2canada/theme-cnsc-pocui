@@ -1,23 +1,25 @@
 <h2>{{{i18n "tmpl-signin"}}}</h2>
 <form role="form" onsubmit="return onSignIn('/create-sealed-source-step-one-{{language}}.html')">
     <div class="form-group">
-        <label for="tbEmail">{{{i18n "lbl-email-address"}}}</label>&nbsp;<strong class="required">({{{i18n "msg-required"}}})</strong>
-        <input type="email" class="form-control" id="tbEmail" placeholder="{{{i18n "ph-email-address"
-    }}}" required="required" />
+        <label for="tbEmail">{{{i18n "lbl-email-address"}}}</label>&nbsp;
+        <strong class="required">({{{i18n "msg-required"}}})</strong>
+        <input type="email" class="form-control" id="tbEmail" placeholder='{{{i18n "ph-email-address"
+    }}}' required="required" />
     </div>
     <div class="form-group">
-        <label for="tbPassword">{{{i18n "lbl-password"}}}</label>&nbsp;<strong class="required">({{{i18n "msg-required"}}})</strong>
-        <input type="password" class="form-control" id="tbPassword" placeholder="{{{i18n "ph-password"}}}" required="required" />
+        <label for="tbPassword">{{{i18n "lbl-password"}}}</label>&nbsp;
+        <strong class="required">({{{i18n "msg-required"}}})</strong>
+        <input type="password" class="form-control" id="tbPassword" placeholder='{{{i18n "ph-password"}}}' required="required" />
     </div>
     <button type="submit" class="btn btn-default">{{{i18n "tmpl-submit"}}}</button>
 </form>
 <script>
     function onSignIn(target) {
+        console.log('sign in clicked')
         var email = document.getElementById('tbEmail').value
-        window.sessionStorage.setItem('userEmail', email)
-        var ee = window.sessionStorage.getItem('userEmail')
-        console.log(ee);
-        location.href = target;
+        var password = document.getElementById('tbPassword').value
+        console.log(email, password, target)
+        poc.signIn(email, password, target)
         return false;
     }
 </script>

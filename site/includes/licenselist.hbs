@@ -1,13 +1,13 @@
 <section>
-    <h3>{{{i18n "ttl-license-list"}}}</h3>
+    <h3>{{{i18n "ttl-licence-list"}}}</h3>
     <div style="margin-bottom:20px;">
-        {{{i18n "inst-license-list"}}}
+        {{{i18n "inst-licence-list"}}}
     </div>
     <div class="table-responsive">
-        <table class="wb-tables table table-striped table-hover datatable no-footer" id="tbl-licenses">
+        <table class="table table-striped table-hover datatable no-footer" id="tbl-licences">
             <thead>
                 <tr>
-                    <th scope="col">{{{i18n "ttl-license-number"}}}</th>
+                    <th scope="col">{{{i18n "ttl-licence-number"}}}</th>
                     <th scope="col">{{{i18n "ttl-effective-date"}}}</th>
                     <th scope="col">{{{i18n "ttl-expiry-date"}}}</th>
                 </tr>
@@ -22,24 +22,24 @@
 </section>
 <script>
     (function (window) {
-        const licenceTable = document.getElementById('tbl-licenses');
-        const tableConfig = { searching: false };
-        const tableData = window.sessionStorage.getItem('licenceRows');
-        if (tableData) {
-            tableConfig.data = JSON.parse(tableData);
-            licenceTable.setAttribute('data-wb-tables', JSON.stringify(tableConfig));
-            console.log('Table data loaded from Cache');
-        } else {
-            const userId = window.sessionStorage.getItem('userId') || '1234'
-            document.addEventListener('DOMContentLoaded', function (event) {
-                $.get('https://cnsc-poc-api.azurewebsites.net/api/users/' + userId + '/authorizations/SSTS', function (authorization) {
-                    const d = authorization.licences.map(function (licence) { return [licence.licenceNumber, licence.effectiveDate, licence.expiryDate] })
-                    tableConfig.data = d;
-                    window.sessionStorage.setItem('licenceRows', JSON.stringify(d));
-                    licenceTable.setAttribute('data-wb-tables', JSON.stringify(tableConfig));
-                    console.log('Table data loaded from API');
-                });
-            });
+        document.addEventListener(
+            'DOMContentLoaded',
+            function () { poc.getLicenceList(licenceListReceived) }
+        );
+
+        function licenceListReceived(licenceList) {
+            var data = poc.licenceListTo2DArray(licenceList)
+            var $table = $('#tbl-licences')
+            var options = {
+                searching: false
+            }
+            poc.addRowClickHandler($table, licenceClick)
+            poc.bindDataToTable(data, $table, options)
+        }
+
+        function licenceClick($row) {
+            var licenceNo = $row.children().first().text();
+            poc.selectLicence(licenceNo);
         }
     }(this));
 </script>

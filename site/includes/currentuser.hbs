@@ -1,28 +1,12 @@
 <div>
-    <span style="margin-right: 100px"><strong>{{{i18n "lbl-user"}}}:</strong></span>
+    <span style="margin-right: 100px">
+        <strong>{{{i18n "lbl-user"}}}:</strong>
+    </span>
     <span id="currentUser"></span>
 </div>
 
 <script>
-    (function (window) {
-        const userNameSessionKey = 'userName'
-        const userElement = document.getElementById('currentUser')
-        const cachedUserName = window.sessionStorage.getItem(userNameSessionKey)
-        const userId = window.sessionStorage.getItem('userId') || '12345'
-        if (cachedUserName) {
-            userElement.innerText = cachedUserName
-            console.log("current User loaded from Cache")
-        } else {
-            document.addEventListener("DOMContentLoaded", function (event) {
-                $.get('https://cnsc-poc-api.azurewebsites.net/api/users/' + userId, function (user) {
-                    const currentUser = user.firstName + ' ' + user.lastName
-                    userElement.innerText = currentUser
-                    window.sessionStorage.setItem(userNameSessionKey, currentUser)
-                    console.log("current User loaded from API")
-                }
-             )
-            });
-        }
-    }(this))
-
+    document.addEventListener("DOMContentLoaded", function (event) {
+        $('#currentUser').text(poc.getCurrentUser().name);
+    });
 </script>
