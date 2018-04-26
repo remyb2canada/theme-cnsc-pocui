@@ -6,7 +6,9 @@
     "postinstall": "bower update",
     "travis_script": "grunt dist",
     "travis_after_success": "grunt deploy",
-    "start": "grunt && cd dist && httpster"
+    "start": "grunt && npm run index && npm run serve",
+    "serve": "cd dist && httpster",
+    "index": "cd dist && cp splashpage-en.html index.html"
   },
   "repository": {
     "type": "git",
