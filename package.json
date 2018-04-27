@@ -4,7 +4,7 @@
   "scripts": {
     "test": "grunt test",
     "postinstall": "bower update",
-    "travis_script": "grunt dist",
+    "build": "grunt dist",
     "travis_after_success": "grunt deploy",
     "start": "grunt && npm run index && npm run serve",
     "serve": "cd dist && httpster",
