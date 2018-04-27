@@ -349,7 +349,7 @@ module.exports = (grunt) ->
 		i18n_csv:
 			list_locales:
 				options:
-					csv: "lib/wet-boew/src/i18n/i18n.csv"
+					csv: "src/i18n/i18n.csv"
 					startCol: 1
 					listOnly: true
 

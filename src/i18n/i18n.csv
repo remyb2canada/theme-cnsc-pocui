@@ -1,0 +1,387 @@
+Language code (ISO 639-1),lang-code,en,fr
+Language code (ISO 639-2/T),lang-code-iso-639-2,eng,fra
+Language direction,lang-dir,ltr,ltr
+Language name (English),lang-en,English,French
+Language name (French),lang-fr,anglais,français
+Language name (native),lang-native,English,Français
+General (i18n),all,All,Tous
+,add,Add,Ajouter
+,home,Home,Accueil
+,main-page,Main page,Page principale
+,focus,Focus,Foyer
+,tphp,Top of page,Haut de la page
+,you-are-in,You are in:,Vous êtes dans :
+,you-are-here,You are here:,Vous êtes ici :
+,welcome-to,Welcome to:,Bienvenue à :
+,load,loading...,chargement...
+,process,processing...,traitement...
+,srch,Search,Recherche
+,srch-terms,Search for term(s):,Recherche de terme(s)&#160;:
+,no-match,No match found,Aucune correspondance trouvée
+,matches,[MIXIN] match(es) found,[MIXIN] correspondance(s) trouvées
+,srch-menus,Search and menus,Recherche et menus
+,menu,Menu,Menu
+,menu-close,Close menu,Fermer le menu
+,overlay-close,Close overlay,Fermer la fenêtre superposée
+,settings,Settings,Paramètres
+,langs,Languages,Langues
+,about,About,À propos
+,current,(current),(actuel)
+,hide,Hide,Masquer
+,err,Error,Erreur
+,colon,:,&#160;:
+,hyphen, - , - 
+,full-stop,.,.
+,comma-space,", ",", "
+,space,&#32;,&#32;
+,start,Start,Lancer
+,stop,Stop,Arrêter
+,back,Back,Précédent
+,cancel,Cancel,Annuler
+,show,Show,Afficher
+,new-win, (Opens in a new window), (Ouvre dans une nouvelle fenêtre)
+,min-ago,a minute ago,il y a une minute
+,coup-mins,couple of minutes ago,il y a quelques minutes
+,mins-ago,[MIXIN] minutes ago,il y a [MIXIN] minutes
+,hour-ago,an hour ago,il y a une heure
+,hours-ago,[MIXIN] hours ago,il y a [MIXIN] heures
+,days-ago,[MIXIN] days ago,il y a [MIXIN] jours
+,yesterday,yesterday,hier
+,nxt,Next,Suivant
+,nxt-r,Next (right arrow key),Suivant (touche droite)
+,prv,Previous,Précédent
+,prv-l,Previous (left arrow key),Précédent (touche gauche)
+,first,First,Premier
+,last,Last,Dernier
+,page,Page,Page
+,esc-key,(escape key),(touche d\'échappement)
+Archived Web page template,arch-pg,This Web page has been archived on the Web.,Cette page Web a été archivée dans le Web.
+Menu bar,sm-hlp,(open the submenu with the enter key and close with the escape key),(ouvrir le sous-menu avec la touche d\'entrée et le fermer avec la touche d\'échappement)
+Tabbed interface,tab-rot-off,Stop tab rotation,Arrêter la rotation d\'onglets
+,tab-rot-on,Start tab rotation,Lancer la rotation d\'onglets
+,tab,Tab #num#,Onglet #num#
+,tab-list,Tab list,Liste des onglets
+,tab-pnl-end1,End of this tab panel.,Fin de ce panneau à onglets.
+,tab-pnl-end2,Return to the tab list,Retourner à la liste des onglets
+,tab-pnl-end3,or continue to the rest of page.,ou continuer au reste de la page.
+,tab-play,Play,Lancer
+Multimedia player,mmp-play,Play,Lire
+,pause,Pause,Pause
+,open,Open,Ouvrir
+,close,Close,Fermer
+,rew,Rewind,Reculer
+,ffwd,Fast forward,Avancer
+,mute-on,Mute,Activer le mode muet
+,mute-off,Unmute,Désactiver le mode muet
+,volume,Volume,Volume
+,cc-off,Hide closed captioning,Masquer le sous-titrage
+,cc-on,Show closed captioning,Afficher le sous-titrage
+,cc-err,Error loading closed captions,Erreur dans le chargement des sous-titres
+,adesc-on,Enable audio description,Activer l\'audiodescription
+,adesc-off,Disable audio description,Désactiver l\'audiodescription
+,prog-bar,use left and right arrow keys to advance and rewind the media\'s progress,utilisez les touches gauche ou droite pour avancer ou reculer le progrès des médias
+,no-video,"Your browser does not appear to have the capabilities to play this video, please download the video below","Votre navigateur ne semble pas avoir les capacité nécessaires pour lire cette vidéo, s\'il vous plaît télécharger la vidéo ci-dessous"
+,pos,Current position:,Position actuelle :
+,perc,Playback percentage:,Pourcentage de lecture :
+,dur,Total time:,Temps total :
+,buff,Buffered:,Mis en mémoire-tampon :
+Share widget,fav,Favourite,Lien préféré
+,email,Email,Courriel
+,shr-txt,Share,Partagez
+,shr-pg, this page, cette page
+,shr-vid, this video, cette vidéo
+,shr-aud, this audio file, ce fichier audio
+,shr-hnt, with {s} , avec {s} 
+,shr-email-sub,Interesting page,Page qui est intéressante
+,shr-email-bd,I thought you might find this page interesting:\n{t} ({u}),J\'espère que cette page vous intéresse :\n{t} ({u})
+,shr-fav-ttl,(bookmark this page),(ajouter cette page à vos signets)
+,shr-man,Please close this dialog and press Ctrl-D to bookmark this page.,S\'il vous plaît fermer ce dialogue et appuyer sur Ctrl-D pour ajouter cette page à vos signets.
+,shr-all,Show all ({n}),Tous montrer ({n})
+,shr-all-ttl,All bookmarking sites,Tout les sites de mise en signet
+,shr-disc,No endorsement of any products or services is expressed or implied.,"Aucun appui n’est accordé, soit de façon expresse ou tacite, à aucun produit ou service."
+Form validation,frm-nosubmit,The form could not be submitted because ,Le formulaire n\'a pu être soumis car 
+,errs-fnd, errors were found., erreurs ont été trouvées.
+,err-fnd, error was found., erreur a été trouvée.
+Date picker,date-hide,Hide calendar,Masquer le calendrier
+,date-show,Pick a date from a calendar for field:,Sélectionner une date à partir d\'un calendrier pour le champ:
+,date-sel,Selected,Sélectionné
+Calendar,days-1,Sunday,Dimanche
+,days-2,Monday,Lundi
+,days-3,Tuesday,Mardi
+,days-4,Wednesday,Mercredi
+,days-5,Thursday,Jeudi
+,days-6,Friday,Vendredi
+,days-7,Saturday,Samedi
+,mnths-1,January,janvier
+,mnths-2,February,février
+,mnths-3,March,mars
+,mnths-4,April,avril
+,mnths-5,May,mai
+,mnths-6,June,juin
+,mnths-7,July,juillet
+,mnths-8,August,août
+,mnths-9,September,septembre
+,mnths-10,October,octobre
+,mnths-11,November,novembre
+,mnths-12,December,décembre
+,cal,Calendar,Calendrier
+,cal-format,"<span class='wb-inv'>{ddd}, {M} </span>{d}<span class='wb-inv'>, {Y}</span>","<span class='wb-inv'>{ddd}, </span>{d}<span class='wb-inv'> {M} {Y}</span>"
+,currDay,(Current day),(Jour courrant)
+,cal-goToLnk,"Go to<span class=""wb-inv""> month of year</span>","Aller au<span class=""wb-inv""> mois de l\'année</span>"
+,cal-goToTtl,Go to month of year,Aller au mois de l\'année
+,cal-goToMnth,Month:,Mois :
+,cal-goToYr,Year:,Année :
+,cal-goToBtn,Go,Aller
+,prvMnth,Previous Month: ,Mois précédent : 
+,nxtMnth,Next Month: ,Mois suivant : 
+Slideout,show-toc,Show table of contents,Afficher la table des matières
+,hide-toc,Hide table of contents,Cacher la table des matières
+,toc,table of contents,la table des matières
+Lightbox,lb-curr,Item %curr% of %total%,Article %curr% de %total%
+,lb-xhr-err,This content failed to load.,Le chargement de ce contenu a échoué.
+,lb-img-err,This image failed to load.,Le chargement de cette image a échoué.
+,lb-slideshow,slideshow,la diaporama
+Charts widget,tbl-txt,Table,Tableau
+,tbl-dtls,Chart. Details in the following table.,Graphique. Plus de détails dans le tableau suivant.
+Session timeout,st-to-msg-bgn,Your session will expire automatically in #min# min #sec# sec.,Votre session expirera automatiquement dans #min# min #sec# sec.
+,st-to-msg-end,"Select ""Continue session"" to extend your session.",Sélectionner « Continuer la session » pour prolonger votre session.
+,st-msgbx-ttl,Session timeout warning,Avertissement d\'expiration de la session
+,st-alrdy-to-msg,Sorry your session has already expired. Please sign in again.,"Désolé, votre session a déjà expiré. S\'il vous plaît ouvrir une nouvelle session."
+,st-btn-cont,Continue session,Continuer la session
+,st-btn-end,End session now,Mettre fin à la session
+Toggle details,td-toggle,Toggle all,Basculer tout
+,td-open,Expand all,Afficher tout
+,td-close,Collapse all,Réduire tout
+,td-ttl-open,Expand all sections of content,Afficher toutes les sections de contenu
+,td-ttl-close,Collapse all sections of content,Réduire toutes les sections de contenu
+Table enhancement,sortAsc,: activate for ascending sort,&#160;: activer pour tri ascendant
+,sortDesc,: activate for descending sort,&#160;: activer pour tri descendant
+,emptyTbl,No data is available in the table,Aucune donnée n'est disponible dans le tableau
+,infoEntr,Showing _START_ to _END_ of _TOTAL_ entries,Affiche _START_ à _END_ de _TOTAL_ entrées
+,infoEmpty,Showing 0 to 0 of 0 entries,Affiche 0 à 0 de 0 entrées
+,infoFilt,(filtered from _MAX_ total entries),(filtré de _MAX_ entrées totales)
+,info1000,",",&#160;
+,lenMenu,Show _MENU_ entries,Afficher _MENU_ entrées
+,filter,Filter items,Filtrer les articles
+Geomap,geo-mpctrl,Map control,Contrôle de la carte
+,geo-zmin,Zoom in,Zoom avant
+,geo-zmout,Zoom out,Zoom arrière
+,geo-zmwrld,Zoom to map extent,Zoom sur l\'étendue de la carte
+,geo-zmfeat,Zoom to element,Zoom à l\'élément
+,geo-geoloc-btn,Zoom to current location,Zoom sur votre position actuelle
+,geo-sclln,Map scale,Échelle de la carte
+,geo-msepos,Latitude and longitude of the mouse cursor,Latitude et longitude du curseur de la souris
+,geo-ally,"<strong>Keyboard users:</strong> When the map is in focus, use the arrow keys to pan the map and the plus and minus keys to zoom. The arrow keys will not pan the map when zoomed to the map extent.","<strong>Utilisateurs de clavier :</strong> Lorsque la carte a l\'attention, utiliser les touches flèches pour déplacer la carte et utiliser les touches plus et négatif pour faire un zoom. La carte ne peut être déplacée lorsque le zoom est à son étendue maximal."
+,geo-ariamap,Map object. The descriptions of the map features are in the table below.,Objet de la carte. Les descriptions des caractéristiques de la carte se trouvent dans la table ci-dessous.
+,geo-allyttl,Instructions: Map Navigation,Instructions : comment naviguer dans la carte
+,geo-tgllyr,Toggle the display of the layer,Basculer l\'affichage de la couche
+,geo-hdnlyr,This layer is currently hidden.,Cette couche est présentement cachée.
+,geo-bmapurltxt,//geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/CBMT_TXT_3978/MapServer/WMTS/tile/1.0.0/BaseMaps_CBMT3978/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpg,//geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/CBCT_TXT_3978/MapServer/WMTS/tile/1.0.0/BaseMaps_CBMT3978/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpg
+,geo-bmapurl,//geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/CBMT_CBCT_GEOM_3978/MapServer/WMTS/tile/1.0.0/BaseMaps_CBMT3978/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpg,
+,geo-bmap-url,//geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/CBMT3978/MapServer/WMTS/,//geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/CBCT3978/MapServer/WMTS/
+,geo-bmap-matrix-set,default028mm,
+,geo-bmapttl,BaseMaps_CBMT3978,BaseMaps_CBCT3978
+,geo-attrlnk,//geogratis.gc.ca/geogratis/CBM_CBC?lang=en,//geogratis.gc.ca/geogratis/CBM_CBC?lang=fr
+,geo-attrttl,GeoGratis - Canada Base Map,GéoGratis - Carte de base du Canada
+,geo-sel,Select,Sélectionnez
+,geo-lblsel,Check to select the element on the map,Cochez pour sélectionner cet élément sur la carte
+,geo-locurl-geogratis,//geogratis.gc.ca/services/geolocation/en/locate,//geogratis.gc.ca/services/geolocation/fr/locate
+,geo-loc-label,Location,Location
+,geo-loc-placeholder,Enter placename&#44; postal code&#44; street address&#44; NTS number...,Indiquer le nom de l&#39;endroit&#44; le code postal&#44; l&#39;adresse (postale)&#44; le numéro du SNRC...
+,geo-aoi-north,North,Nord
+,geo-aoi-east,East,Est
+,geo-aoi-south,South,Sud
+,geo-aoi-west,West,Ouest
+,geo-aoi-instructions,"Draw box on map or enter coordinates below and click the ""Add"" button.","Délimiter un territoire sur la carte ou entrer les coordonnées ci-dessous, puis cliquer sur le bouton &#171;&#160;Ajouter&#160;&#187;."
+,geo-aoi-btndraw,Draw,Tracer
+,geo-aoi-btnclear,Clear,Enlever
+,geo-aoi-btndraw-tip,Toogle draw mode,Activer/désactiver le mode dessin
+,geo-aoi-btnclear-tip,Clear coordinates and bounding box,Effacer les coordonnées et la boîte englobante
+,geo-aoi-btnadd-tip,Update bounding box with new coordinates,Mettre à jour la boîte englobante selon les nouvelles coordonnées
+,geo-geoloc-fail,Geolocation failed. Please ensure that location services are enabled.,Localisation a échoué. S'il vous plaît s'assurer que les services de localisation sont activés.
+,geo-geoloc-uncapable,Geolocation is not supported by your browser.,Localisation n'est pas supporté par votre navigateur.
+,geo-lgnd-grphc,Legend graphic for map layer.,Graphique légende couche cartographique.
+Disable/enable WET plugins and polyfills (v4.x+),wb-disable,Switch to basic HTML version,Passer à la version HTML simplifiée
+,wb-enable,Switch to standard version,Passer à la version standard
+,wb-basic-warning,You are currently viewing in basic HTML.,Vous visualisez actuellement en HTML simplifiée.
+,disable-notice-h,Notice: Basic HTML,Avis : Version HTML simplifiée
+,disable-notice,You are viewing Basic HTML view. Some features may be disabled.,Vous naviguez présentement sur la version HTML simplifiée de cette page. Certaines fonctionnalités peuvent être déactivées.
+Dismissable content,dismiss,Dismiss,Écarter
+Filter,fltr-lbl,"Filter<span class=""wb-inv""> content: results appear below as you type.</span>","Filtrer<span class=""wb-inv""> le contenu: Les résultats s'afficherons au moment même de la saisie.</span>"
+,fltr-info,Showing _NBITEM_ filtered from _TOTAL_ total entries,Affiche _NBITEM_ de _TOTAL_ éléments filtrés.
+Template strings (Generic),tmpl-skip-cont,Skip to main content,Passer au contenu principal
+,tmpl-skip-sec,Skip to secondary menu,Passer au menu secondaire
+,tmpl-skip-section,Skip to section menu,Passer au menu de la section
+,tmpl-skip-foot,Skip to footer,Passer au pied de page
+,tmpl-skip-info,Skip to site information,Passer aux informations sur le site
+,tmpl-skip-about-site,"Skip to ""About this site""",Passer à «&#160;À propos de ce site&#160;»
+,tmpl-search,Search,Recherche
+,tmpl-search-site,Search website,Recherchez le site Web
+,tmpl-site-menu,Site menu,Menu du site
+,tmpl-topics-menu,Topics menu,Menu des sujets
+,tmpl-bcrumb,Breadcrumb trail,Fil d'Ariane
+,tmpl-home,Home,Accueil
+,tmpl-sec-menu,Secondary menu,Menu secondaire
+,tmpl-section-menu,Section menu,Menu de la section
+,tmpl-sup-cont,Supplemental content,Contenu supplémentaire
+,tmpl-foot,Footer,Pied de page
+,tmpl-site-info,Site information,Informations sur le site
+,tmpl-about,About,À propos
+,tmpl-about-site,About this site,À propos de ce site
+,tmpl-date-mod,Date modified:,Date de modification&#160;:
+,tmpl-version,Version:,Version&#160;:
+,tmpl-signin,Sign in,Ouvrir une session
+,tmpl-signout,Sign out,Fermer la session
+,tmpl-myaccount,My account,Mon compte
+,tmpl-accountsettings,Account settings,Paramètres du compte
+,tmpl-lang-select,Language selection,Sélection de la langue
+,tmpl-more,More,Autres
+Template strings (GC Web Usability theme),tmpl-gc-navbar,Government of Canada navigation bar,Barre de navigation du gouvernement du Canada
+,tmpl-gc-sig,Government of Canada,Gouvernement du Canada
+,tmpl-gc-wmms,Symbol of the Government of Canada,Symbole du gouvernement du Canada
+,tmpl-gc-ca,Canada.ca,Canada.ca
+,tmpl-services,Services,Services
+,tmpl-depts,Departments,Ministères
+,tmpl-priorities,Priorities,Priorités
+,tmpl-gc-foot,Government of Canada footer,Pied de page du gouvernement du Canada
+,tmpl-site-foot,Site footer,Pied de page du site
+,tmpl-terms,Terms and conditions,Avis
+,tmpl-transparency,Transparency,Transparence
+,tmpl-health,Health,Santé
+,tmpl-health-url,healthycanadians.gc.ca,canadiensensante.gc.ca
+,tmpl-travel,Travel,Voyage
+,tmpl-travel-url,travel.gc.ca,voyage.gc.ca
+,tmpl-servicecanada,Service Canada,Service Canada
+,tmpl-servicecanada-url,servicecanada.gc.ca,servicecanada.gc.ca
+,tmpl-jobs,Jobs,Emplois
+,tmpl-jobs-url,jobbank.gc.ca,guichetemplois.gc.ca
+,tmpl-economy,Economy,Économie
+,tmpl-economy-url,actionplan.gc.ca,plandaction.gc.ca
+Template strings (GC Web Usability Intranet theme),tmpl-gcintra-navbar,Intranet navigation bar,Barre de navigation d'intranet
+Filler content (Generic),tmpl-sub-site-name,Sub-site name,Nom du sous-site
+,tmpl-header-bar,Header bar,Barre d'en-tête
+,tmpl-footer-bar,Footer bar,Barre de pied de page
+,tmpl-section,Section,Section
+,tmpl-item,Item,Article
+,tmpl-wet,Web Experience Toolkit&#160;(WET),Boîte à outils de l'expérience Web&#160;(BOEW)
+,tmpl-wet-subline,Collaborative open source project led by the Government of Canada,Projet à source ouverte collaboratif dirigé par le Gouvernement du Canada
+,tmpl-wet-twitter,WebExpToolkit,BoiteExpWeb
+,tmpl-ogpl,Open Government Platform&#160;(OGPL),Plate-forme de gouvernement ouvert&#160;(PGO)
+,tmpl-ogpl-theme,OGPL theme,Thème de la PGO
+,tmpl-base-theme,Base theme,Thème de base
+,tmpl-gcwu-theme,GC Web Usability theme,Thème de la facilité d'emploi Web GC
+,tmpl-gc-intranet-theme,GC Intranet theme,Thème du GC pour les sites intranet
+,tmpl-wet-theme,WET theme,Thème de la BOEW
+,tmpl-gcweb-theme,Canada.ca theme,Thème Canada.ca
+,tmpl-cont-page,Content page,Page de contenu
+,tmpl-fixed-header,Fixed mobile header,En-tête fixe mobile
+,tmpl-home-page,Home page,Page d'accueil
+,tmpl-serv-page,Server message page,Page de message du serveur
+,tmpl-splash-page,Splash page,Page d'entrée
+,tmpl-nosearchlang,No search or language selection link,Sans recherche ou lien de sélection de la langue
+,tmpl-nositemenubc,No site menu or breadcrumb trail,Sans menu du site ou fil d'Ariane
+,tmpl-nosearchlangsitemenubc,"No search, language selection link, site menu or breadcrumb trail","Sans recherche, lien de sélection de la langue, menu du site ou fil d'Ariane"
+,tmpl-web-application,Application template,Modèle pour applications
+,tmpl-multilingual,Multilingual,Multilingue
+,tmpl-site-title,Site title,Titre du site
+,tmpl-msg-title,Message title,Titre du message
+,tmpl-sub-site,Sub-site,Sous-site
+,tmpl-wet-project,WET project,Projet de la BOEW
+,tmpl-wet-on-github,WET on Github,Page principale du projet
+,tmpl-wet-main-project-page,Main project page,Page principale du projet
+,tmpl-work-examples,Working examples,Exemples pratiques
+,tmpl-documentation,Documentation,Documentation
+,tmpl-downloads,Downloads,Téléchargements
+,tmpl-implement,Implement,Mise en œuvre
+,tmpl-implement-wet,Implement WET,Mise en œuvre de la BOEW
+,tmpl-contribute,Contribute,Contribuer
+,tmpl-contribute-wet,Contribute to WET,Contribuer à la BOEW
+,tmpl-about-wet,About the Web Experience Toolkit,À propos de la Boîte à outils de l’expérience Web
+,tmpl-about-web-standards,About the Web Standards,À propos des normes Web
+,tmpl-default-app,default appearance,apparence par défaut
+,tmpl-heading,Heading,En-tête
+,tmpl-para,Paragraph,Paragraphe
+,tmpl-link,Link,Lien
+,tmpl-link-custom,Custom link,Lien personnalisé
+,tmpl-third-party,third party,tiers
+,tmpl-file-downloads,file downloads based on file type,téléchargements des fichiers fondés sur le type de fichier
+,tmpl-abbr,Abbreviation,Abréviation
+,tmpl-ul,unordered list,liste à puces
+,tmpl-ol,ordered list,liste ordonnée
+,tmpl-level,level,niveau
+,tmpl-table-caption,Table caption,Légende de table
+,tmpl-table-head,Table header,En-tête de table
+,tmpl-table-data,Table data,Données de table
+,tmpl-form,Form,Formulaire
+,tmpl-option,Option,Option
+,tmpl-and,and,et
+,tmpl-submit,Submit,Soumettre
+,tmpl-reset,Reset,Réinitialiser
+,tmpl-about-anchor,about,apropos
+,tmpl-about-us,About us,À propos de nous
+,tmpl-our-mandate,Our Mandate,Notre mandat
+,tmpl-our-history,Our history,Notre histoire
+,tmpl-minister,The Minister,Le ministre
+,tmpl-news,News,Nouvelles
+,tmpl-news-rel,News releases,Communiqués
+,tmpl-media-avisories,Media advisories,Avix aux médias
+,tmpl-recent-project-activity,Recent project activity,Activité du projet récente
+,tmpl-project,Project,Projet
+,tmpl-project-stats,Project statistics,Statistiques du projet
+,tmpl-multimedia,Multimedia,Multimédia
+,tmpl-contact-us,Contact us,Contactez-nous
+,tmpl-phone-nums,Phone numbers,Numéros de téléphone
+,tmpl-office-loc,Office locations,Nos bureaux
+,tmpl-questions-comments,Questions or comments?,Questions ou commentaires?
+,tmpl-edit-this-page,Edit this page,Modifier cette page
+,tmpl-revision-history,Revision history,Historique des révisions
+,tmpl-add-desc,Please add a brief description.,S'il vous plaît ajouter une brève description
+,tmpl-stay-connected,Stay connected,Restez branchés
+,tmpl-feeds,Feeds,Fils de nouvelles
+Filler content (GC Web Usability theme),tmpl-headlines,Headlines,Nouvelles
+,tmpl-sample-text,Sample text.,Texte modèle.
+,tmpl-read-more,Read more,En&#160;plus
+,tmpl-priority,Priority,Priorité
+,tmpl-videos,Videos,Vidéo
+,tmpl-sample-player,Sample video player,Exemple d'un lecteur multimédia
+,tmpl-video-title,Video title,Titre de la vidéo
+,tmpl-desc-video,Short description of the current video.,Description courte de la vidéo actuelle.
+,tmpl-multi-help,Multimedia help,Aide multimédia
+,tmpl-transcripts,Transcripts and alternative formats,Formats de transcription et de remplacement
+,tmpl-meet-minister,Meet the Minister,Rencontrer le ministre
+,tmpl-honourable,The Honourable,L'honorable
+,tmpl-minister-name,minister name,nom du ministre
+,tmpl-about-minister,About the minister,Le ministre
+,tmpl-portfolio,His portfolio,Son portefeuille
+,tmpl-benefits,Benefits,Avantages
+,tmpl-benefits-anchor,benefits,avantages
+,tmpl-accolades,"Awards, articles and videos","Primes, articles et vidéos"
+,tmpl-roadmap,Roadmap of past and future releases,Feuille de route pour les versions passées et futures
+,tmpl-version-history,Version history,Historique des versions
+,tmpl-getting-started,Getting started with WET,Comment démarrer avec la BOEW
+,tmpl-download-wet,Download WET,Télécharger la BOEW
+,tmpl-using-github,Using Github for WET,Guide d'utilisation de GitHub pour la BOEW
+,tmpl-contributor-guidelines,Contributor guidelines,Lignes directrices pour les contributeurs
+,tmpl-contribute-bug,Filing a bug or an issue,Soumettre un bogue ou un problème
+,tmpl-contribute-pr,Creating a pull request,Créer un &#171;&#160;<span lang='en'>pull request</span>&#160;&#187;
+,tmpl-contribute-test,Testing your code,Tester votre code
+,tmpl-contribute-develop,Developing for WET,Développer pour la BOEW
+,tmpl-contribute-docs,Creating documentation,Écrire la documentation
+,tmpl-guides,Guides,Guides
+,tmpl-promote-wet,Promote WET,Promotion de la BOEW
+,tmpl-events,Events,Événements
+,tmpl-design-guide,Design guide,Guide de conception
+,tmpl-accessibility-guide,Accessibility guide,Guide sur l’accessibilité
+,tmpl-usability-guide,Usability guide,Guide sur la facilité d'emploi
+,tmpl-writing-guide,Writing guide,Guide de rédaction
+,tmpl-more-guides,More guides,Plus de guides
+,tmpl-websites-using-wet,Websites using WET,Sites Web qui se servent de la BOEW
+,tmpl-v31-ref-head,Looking for WET v3.1?,Vous cherchez la BOEW v3.1?
+,tmpl-v31-ref-1,"As of September 23, 2014, version 3.1 of the Web Experience Toolkit is no longer supported. The source code and documentation have been moved to the","À partir du 23 septembre 2014, la version 3.1 de la Boîte à outils de l'expérience Web n'est plus supportée. Le code source et la documentation ont été déplacés vers le dépôt"
+,tmpl-v31-ref-3, repository.,.
+,site-title,Web Experience Toolkit,Boîte à outils de l'expérience Web
+,site-tagline,Collaborative open source project led by the Government of Canada,Projet à source ouverte collaboratif dirigé par le Gouvernement du Canada
+,site-description,"Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities","La Boîte à outils de l’expérience Web (BOEW) rassemble différents composants réutilisables et prêts-à-utiliser pour la conception et la mise à jour de sites Web innovateurs qui sont à la fois accessibles, conviviaux et interopérables. Tous ces composants réutilisables sont des logiciels libres mis à la disposition des ministères et des collectivités Web externes."
+,tmpl-sign-on-info,Sign-on information,Information de l'utilisateur actuel
+,tmpl-register,Register,Inscription
+,tmpl-signed-in-as,Signed in as,Connecté en tant que
