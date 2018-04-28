@@ -1,6 +1,6 @@
 {
     "defaultLanguage": "en",
-    "wetSiteRoot": "http://wet-boew.github.io/v4.0-ci",
+    "wetSiteRoot": "http://cnscpocfe.azurewebsites.net",
     "repository": "theme-cnsc-fepoc",
     "theme": "theme-cnsc-fepoc",
     "themeJS": true
