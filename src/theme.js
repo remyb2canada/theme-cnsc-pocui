@@ -21,31 +21,31 @@
   }
 
   var API_ROOT = 'https://cnsc-poc-api.azurewebsites.net/api/'
-  var store = window.sessionStorage
 
   /* -----------------------------
    * USERS AND AUTHENTICATION
    *----------------------------- */
-  function signIn (email, password, redirect) {
+  function signIn (email, password, redirect, store, location) {
+    location = location || window.location
     $.get(API_ROOT + '/users/1234', function (user) {
       user.email = user.email || email
-      cacheUser(user)
+      cacheUser(user, store)
       location.href = redirect
     })
   }
 
-  function cacheUser (user) {
+  function cacheUser (user, store) {
     setState({
       currentUser: {
         id: '1234',
         email: user.email,
         name: user.firstName + ' ' + user.lastName
       }
-    })
+    }, store)
   }
 
-  function getCurrentUser () {
-    const user = getState().currentUser
+  function getCurrentUser (store) {
+    const user = getState(store).currentUser
     if (user) {
       return user
     }
@@ -55,8 +55,8 @@
   /* -----------------------------
    * LICENCES
    *----------------------------- */
-  function getLicenceList (listReceivedCallback) {
-    var licenceList = getCachedLicenseList()
+  function getLicenceList (listReceivedCallback, store) {
+    var licenceList = getCachedLicenseList(store)
     if (licenceList) {
       console.log('using cached license list')
       return listReceivedCallback(licenceList)
@@ -74,14 +74,14 @@
     }
   }
 
-  function getCachedLicenseList () {
-    return getState().licenceList
+  function getCachedLicenseList (store) {
+    return getState(store).licenceList
   }
 
-  function cacheLicenceList (list) {
+  function cacheLicenceList (list, store) {
     setState({
       licenceList: list
-    })
+    }, store)
   }
 
   function licenceListTo2DArray (list) {
@@ -133,12 +133,49 @@
   /* -----------------------------
    * STATE MANAGEMENT
    *----------------------------- */
-  function getState () {
+  function getState (store) {
+    store = store || window.sessionStorage
     return JSON.parse(store.getItem('state') || '{}')
   }
 
-  function setState (state) {
+  function setState (state, store) {
+    store = store || window.sessionStorage
     store.setItem('state', JSON.stringify(Object.assign(getState(), state)))
+  }
+
+  /* -----------------------------
+   * POLYFILL FOR Object.Assign
+   * originally from: 
+   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+   * ----------------------------- */
+  if (typeof Object.assign != 'function') {
+    // Must be writable: true, enumerable: false, configurable: true
+    Object.defineProperty(Object, "assign", {
+      value: function assign(target, varArgs) { // .length of function is 2
+        'use strict';
+        if (target == null) { // TypeError if undefined or null
+          throw new TypeError('Cannot convert undefined or null to object');
+        }
+  
+        var to = Object(target);
+  
+        for (var index = 1; index < arguments.length; index++) {
+          var nextSource = arguments[index];
+  
+          if (nextSource != null) { // Skip over if undefined or null
+            for (var nextKey in nextSource) {
+              // Avoid bugs when hasOwnProperty is shadowed
+              if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+                to[nextKey] = nextSource[nextKey];
+              }
+            }
+          }
+        }
+        return to;
+      },
+      writable: true,
+      configurable: true
+    });
   }
 
   window['wb-data-ajax'] = {
