@@ -2,11 +2,13 @@
     <span style="margin-right: 100px">
         <strong>{{{i18n "lbl-user"}}}:</strong>
     </span>
-    <span id="currentUser"></span>
+    <span id="currentUser"></span>&nbsp;&lt;<span id="currentUserEmail"></span>&gt;
 </div>
 
 <script>
     document.addEventListener("DOMContentLoaded", function (event) {
-        $('#currentUser').text(poc.getCurrentUser().name);
+        var currentUser = poc.getCurrentUser()
+        $('#currentUser').text(currentUser.name);
+        $('#currentUserEmail').text(currentUser.email);
     });
 </script>
