@@ -35,13 +35,13 @@
   }
 
   function cacheUser (user, store) {
-    setState({
-      currentUser: {
+    setState(
+      'currentUser', {
         id: '1234',
         email: user.email,
         name: user.firstName + ' ' + user.lastName
       }
-    }, store)
+    , store)
   }
 
   function getCurrentUser (store) {
@@ -79,9 +79,9 @@
   }
 
   function cacheLicenceList (list, store) {
-    setState({
-      licenceList: list
-    }, store)
+    setState(
+      'licenceList', list
+    , store)
   }
 
   function licenceListTo2DArray (list) {
@@ -92,9 +92,7 @@
 
   function selectLicence (licenceNumber) {
     console.log('selected licence number: ' + licenceNumber)
-    setState({
-      selectedLicence: licenceNumber
-    })
+    setState('selectedLicence', licenceNumber)
   }
 
   function getSelectedLicence () {
@@ -138,44 +136,11 @@
     return JSON.parse(store.getItem('state') || '{}')
   }
 
-  function setState (state, store) {
+  function setState (key, value, store) {
     store = store || window.sessionStorage
-    store.setItem('state', JSON.stringify(Object.assign(getState(), state)))
-  }
-
-  /* -----------------------------
-   * POLYFILL FOR Object.Assign
-   * originally from: 
-   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
-   * ----------------------------- */
-  if (typeof Object.assign != 'function') {
-    // Must be writable: true, enumerable: false, configurable: true
-    Object.defineProperty(Object, "assign", {
-      value: function assign(target, varArgs) { // .length of function is 2
-        'use strict';
-        if (target == null) { // TypeError if undefined or null
-          throw new TypeError('Cannot convert undefined or null to object');
-        }
-  
-        var to = Object(target);
-  
-        for (var index = 1; index < arguments.length; index++) {
-          var nextSource = arguments[index];
-  
-          if (nextSource != null) { // Skip over if undefined or null
-            for (var nextKey in nextSource) {
-              // Avoid bugs when hasOwnProperty is shadowed
-              if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
-                to[nextKey] = nextSource[nextKey];
-              }
-            }
-          }
-        }
-        return to;
-      },
-      writable: true,
-      configurable: true
-    });
+    const state = getState(store)
+    state[key] = value
+    store.setItem('state', JSON.stringify(state))
   }
 
   window['wb-data-ajax'] = {
