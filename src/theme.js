@@ -90,17 +90,18 @@
     })
   }
 
-  function selectLicence (licenceNumber) {
-    console.log('selected licence number: ' + licenceNumber)
-    setState('selectedLicence', licenceNumber)
+  $(document).on('licenceSelected', selectLicence)
+  function selectLicence (e) {
+    setState('selectedLicence', e.selectedLicence)
+    location.href = '/create-sealed-source-step-two-' + wb.lang + '.html'
   }
 
   function getSelectedLicence () {
     var selectedLicence = getState().selectedLicence
-    if (!selectedLicense) {
+    if (!selectedLicence) {
       location.href = '/create-sealed-source-step-one-' + wb.lang + '.html'
     }
-    return selectedLicense
+    return selectedLicence
   }
 
   /* -----------------------------
@@ -120,8 +121,10 @@
     $table.on('init.dt', function (event) {
       $table.find('tr').each(function (index, row) {
         if (index > 0) {
-          $(row).click(function (e) {
-            onClick($(row))
+          $(row)
+            .css('cursor', 'pointer')
+            .click(function (e) {
+              onClick($(row))
           })
         }
       })

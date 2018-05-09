@@ -3,6 +3,8 @@
     "lbl-email-address": "Email address",
     "lbl-password": "Password",
     "lbl-user": "User",
+    "lbl-licence-no": "Licence",
+    "lbl-licensee": "Licensee",
     "msg-loading": "Loading",
     "msg-required": "required",
     "ph-email-address": "Enter email",

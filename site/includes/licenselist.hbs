@@ -39,7 +39,7 @@
 
         function licenceClick($row) {
             var licenceNo = $row.children().first().text();
-            poc.selectLicence(licenceNo);
+            $(document).trigger($.Event('licenceSelected', {selectedLicence: licenceNo}))
         }
     }(this));
 </script>
